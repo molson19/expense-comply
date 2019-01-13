@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (4.8.0)
+  - GPUImage (0.1.7)
+  - NVActivityIndicatorView (4.4.0):
+    - NVActivityIndicatorView/Presenter (= 4.4.0)
+  - NVActivityIndicatorView/Presenter (4.4.0)
+  - SwiftOCR (1.1):
+    - GPUImage
+
+DEPENDENCIES:
+  - Alamofire
+  - NVActivityIndicatorView
+  - SwiftOCR
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - GPUImage
+    - NVActivityIndicatorView
+    - SwiftOCR
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
+  SwiftOCR: e1a5c7582f074b54df2b1ad273983088b3cf5d45
+
+PODFILE CHECKSUM: 23975068051ab81c754e32e2d41f9466b8da5b46
+
+COCOAPODS: 1.5.3

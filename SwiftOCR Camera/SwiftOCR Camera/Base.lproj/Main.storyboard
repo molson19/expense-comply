@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftOCR_Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sir-0n-P0T" userLabel="Camera View">
+                                <rect key="frame" x="0.0" y="43" width="375" height="624"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UXF-1j-qpb" userLabel="View Finder">
+                                <rect key="frame" x="0.0" y="282" width="375" height="104"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.01" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UXF-1j-qpb" secondAttribute="height" multiplier="400:110" id="Wf9-rR-8La"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcA-i2-TBm">
+                                <rect key="frame" x="16" y="40" width="343" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="J7k-W1-n8e">
+                                <rect key="frame" x="14" y="465" width="347" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="RiE-Mr-P3g"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3IL-T3-k3b" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="124" y="299" width="127" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballScaleMultiple"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3C7-Ja-QDw">
+                                <rect key="frame" x="0.0" y="-1" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="ExpenseComply" id="bGF-Hb-bEz">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="add" id="F3v-35-W5b">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="organize" id="5HN-5z-3de">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="tcI-4k-ybx" kind="show" id="LSR-J5-8uJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="alN-dg-t5B">
+                                <rect key="frame" x="20" y="700" width="335" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pizza Margharita Large" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pR3-pi-nU0">
+                                        <rect key="frame" x="15" y="15" width="264" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="9.99 USD base + 2.99 tip USD" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pEw-wu-pIe">
+                                        <rect key="frame" x="15" y="55" width="273" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.61568627450980395" green="0.61568627450980395" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="✅" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h7E-9y-bbj">
+                                        <rect key="frame" x="288" y="15" width="44" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20% of your daily per diem" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Zq-co-GkI">
+                                        <rect key="frame" x="15" y="96" width="273" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.090196078431372548" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="PcA-i2-TBm" secondAttribute="trailing" id="CXd-aB-BKk"/>
+                            <constraint firstItem="J7k-W1-n8e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Hn5-8D-iNu"/>
+                            <constraint firstItem="PcA-i2-TBm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="YOu-l0-6Sc"/>
+                            <constraint firstAttribute="trailing" secondItem="UXF-1j-qpb" secondAttribute="trailing" id="ZvS-aF-rF7"/>
+                            <constraint firstItem="PcA-i2-TBm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aot-f4-0ZN"/>
+                            <constraint firstItem="J7k-W1-n8e" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dTG-Ok-YOe"/>
+                            <constraint firstItem="UXF-1j-qpb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eGt-aw-WMz"/>
+                            <constraint firstItem="UXF-1j-qpb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oCK-S5-cY0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="sir-0n-P0T" id="Gq5-1p-gdr"/>
+                        <outlet property="compliesBool" destination="h7E-9y-bbj" id="2nN-cN-udS"/>
+                        <outlet property="dailyLimit" destination="3Zq-co-GkI" id="e7N-rj-fmW"/>
+                        <outlet property="itemName" destination="pR3-pi-nU0" id="Cu2-hb-tb1"/>
+                        <outlet property="label" destination="PcA-i2-TBm" id="roR-02-5wS"/>
+                        <outlet property="price" destination="pEw-wu-pIe" id="0u9-ZF-XaY"/>
+                        <outlet property="slider" destination="J7k-W1-n8e" id="Ar6-EE-9MQ"/>
+                        <outlet property="spinner" destination="3IL-T3-k3b" id="E8G-gK-Czz"/>
+                        <outlet property="topLevelModal" destination="alN-dg-t5B" id="fJF-N7-he7"/>
+                        <outlet property="viewFinder" destination="UXF-1j-qpb" id="OdU-J1-6H9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="305.39730134932535"/>
+        </scene>
+        <!--Expense Items View Controller-->
+        <scene sceneID="XAH-J6-KXb">
+            <objects>
+                <viewController id="tcI-4k-ybx" customClass="ExpenseItemsViewController" customModule="SwiftOCR_Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cgP-gp-gAk"/>
+                        <viewControllerLayoutGuide type="bottom" id="sA1-r0-7GS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nXu-9q-qQF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KiG-l0-gOL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Expense Reports" id="rlJ-IE-EQ2">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="RPl-4p-EDG">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jlY-iQ-skD">
+                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Back"/>
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="show" id="xYJ-0n-Mig"/>
+                                                </connections>
+                                            </button>
+                                            <connections>
+                                                <action selector="goBack:" destination="tcI-4k-ybx" id="g8t-Ef-HsA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="43FEAF8800000578-4860724-image-a-1_1504773481753" translatesAutoresizingMaskIntoConstraints="NO" id="jrf-T5-3uv">
+                                <rect key="frame" x="15" y="59" width="165" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cvs-receipt" translatesAutoresizingMaskIntoConstraints="NO" id="cn6-77-8dm">
+                                <rect key="frame" x="194" y="59" width="165" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="did-you-know-your-kfc-receipts-can-help-you-get-discounts-for-more-chicken-world-of-buzz-3" translatesAutoresizingMaskIntoConstraints="NO" id="FUw-tT-d6O">
+                                <rect key="frame" x="15" y="199" width="165" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="dqZ-ZX-cBc">
+                                <rect key="frame" x="194" y="199" width="165" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="Wy1-ug-Ei8">
+                                <rect key="frame" x="15" y="339" width="165" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="receipt-1-1" translatesAutoresizingMaskIntoConstraints="NO" id="Aar-H7-Ipw">
+                                <rect key="frame" x="194" y="339" width="165" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="untitled-5" translatesAutoresizingMaskIntoConstraints="NO" id="RoN-dd-gH2">
+                                <rect key="frame" x="15" y="481" width="165" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="veggie-grocery-receipt_orig" translatesAutoresizingMaskIntoConstraints="NO" id="5ZJ-DO-Tx6">
+                                <rect key="frame" x="194" y="481" width="165" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="receipt-1-1" translatesAutoresizingMaskIntoConstraints="NO" id="UgG-5d-wnv">
+                                <rect key="frame" x="15" y="624" width="165" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cvs-receipt" translatesAutoresizingMaskIntoConstraints="NO" id="vxm-0D-Qk0">
+                                <rect key="frame" x="194" y="624" width="165" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vtk-ec-Zpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997.60000000000002" y="304.4977511244378"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="43FEAF8800000578-4860724-image-a-1_1504773481753" width="543.4285888671875" height="966"/>
+        <image name="cvs-receipt" width="628" height="353"/>
+        <image name="did-you-know-your-kfc-receipts-can-help-you-get-discounts-for-more-chicken-world-of-buzz-3" width="720" height="960"/>
+        <image name="download" width="208" height="242"/>
+        <image name="images" width="194" height="259"/>
+        <image name="receipt-1-1" width="261" height="469"/>
+        <image name="untitled-5" width="407" height="627.84002685546875"/>
+        <image name="veggie-grocery-receipt_orig" width="465" height="553"/>
+    </resources>
+</document>
